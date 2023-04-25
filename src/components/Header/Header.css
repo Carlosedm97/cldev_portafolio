@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    font-family: 'Poppins';
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 4px solid #1A2233;
+}
+
+.logo__enlace {
+    text-decoration: none;
+    color: #1A2233;
+}
+
+.logo__dot {
+    color: #2490CE;
+}
+
+.header__nav {
+    width: 40%;
+}
+
+.nav__list {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    
+}
+
+.list__item {
+    list-style-type: none;
+}
+
+.item__link {
+    text-decoration: none;
+    color: #1A2233;
+}
+
+.nav__list .list__item:last-child .item__link {
+    background-color: #1A2233;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
