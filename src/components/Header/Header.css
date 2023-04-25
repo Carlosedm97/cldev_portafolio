@@ -1,6 +1,7 @@
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 10%;
     align-items: center;
     border-bottom: 4px solid #1A2233;
 }
@@ -15,7 +16,7 @@
 }
 
 .header__nav {
-    width: 40%;
+    width: 50%;
 }
 
 .nav__list {

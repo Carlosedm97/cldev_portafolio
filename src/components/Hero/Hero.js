@@ -5,7 +5,7 @@ function Hero(){
         <div className='hero__info'>
             <div className='hero__texts'>
                 <p className='texts__paragraph'>Hola, me llamo Carlos, soy</p>
-                <h2 className='texts__title'>Desarrollador Front End.</h2>
+                <h2 className='texts__title'>Desarrollador Front End<span className='texts__underscore'>_</span></h2>
             </div>
             <div className='hero__buttons'>
                 <a 
