@@ -1,0 +1,19 @@
+.skills {
+    padding: 0 10%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skills__title {
+    font-size: 2rem;
+}
+
+.skills__container {
+    margin: 19px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

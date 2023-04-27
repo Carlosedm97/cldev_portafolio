@@ -1,4 +1,7 @@
 import './Hero.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFile } from '@fortawesome/free-solid-svg-icons'
 
 function Hero(){
     return <section className='hero'>
@@ -12,17 +15,17 @@ function Hero(){
                     className='button__link' 
                     href='https://github.com/Carlosedm97' 
                     target='_blank' 
-                    rel='noreferrer'>GitHub<i class="fa-brands fa-github"></i></a>
+                    rel='noreferrer'>GitHub<FontAwesomeIcon icon={faGithub} /></a>
                 <a 
                     className='button__link' 
                     href='https://www.linkedin.com/in/carlos-antonio-meza-lopez/' 
                     target='_blank' 
-                    rel='noreferrer'>LinkedIn<i class="fa-brands fa-linkedin"></i></a>
+                    rel='noreferrer'>LinkedIn<FontAwesomeIcon icon={faLinkedin} /></a>
                 <a 
                     className='button__link' 
                     href='https://github.com/Carlosedm97' 
                     target='_blank' 
-                    rel='noreferrer'>Curriculum<i class="fa-solid fa-file"></i></a>
+                    rel='noreferrer'>Curriculum<FontAwesomeIcon icon={faFile} /></a>
             </div>
         </div>
         <div className='hero__image'>

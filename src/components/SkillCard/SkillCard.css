@@ -1,0 +1,24 @@
+.skill__card {
+    width: 140px;
+    height: 140px;
+    background-color: #1A2233;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 10px;
+}
+
+.card__icon {
+    width: 32px;
+    height: 32px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+}
+
+.card_name {
+    margin: 0;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    font-weight: 400;
+}
