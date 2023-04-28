@@ -1,9 +1,9 @@
-import './Hero.css'
+import './Hero.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faFile } from '@fortawesome/free-solid-svg-icons'
+import { faFile } from '@fortawesome/free-solid-svg-icons';
 
-function Hero(){
+const Hero = () => {
     return <section className='hero'>
         <div className='hero__info'>
             <div className='hero__texts'>
@@ -15,23 +15,23 @@ function Hero(){
                     className='button__link' 
                     href='https://github.com/Carlosedm97' 
                     target='_blank' 
-                    rel='noreferrer'>GitHub<FontAwesomeIcon icon={faGithub} /></a>
+                    rel='noopener noreferrer'>GitHub<FontAwesomeIcon icon={faGithub} /></a>
                 <a 
                     className='button__link' 
                     href='https://www.linkedin.com/in/carlos-antonio-meza-lopez/' 
                     target='_blank' 
-                    rel='noreferrer'>LinkedIn<FontAwesomeIcon icon={faLinkedin} /></a>
+                    rel='noopener noreferrer'>LinkedIn<FontAwesomeIcon icon={faLinkedin} /></a>
                 <a 
                     className='button__link' 
                     href='https://github.com/Carlosedm97' 
                     target='_blank' 
-                    rel='noreferrer'>Curriculum<FontAwesomeIcon icon={faFile} /></a>
+                    rel='noopener noreferrer'>Curriculum<FontAwesomeIcon icon={faFile} /></a>
             </div>
         </div>
         <div className='hero__image'>
             <img src='https://github.com/Carlosedm97.png' alt='Foto de Carlos'/>
         </div>
     </section>
-}
+};
 
-export default Hero
+export default Hero;

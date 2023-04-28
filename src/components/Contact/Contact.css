@@ -1,0 +1,19 @@
+.contact {
+    padding: 0 10%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__title {
+    font-size: 2rem;
+}
+
+.contact__form {
+    background-color: #1A2233;
+    padding: 25px 50px;
+    width: 50%;
+    border-radius: 15px;
+}

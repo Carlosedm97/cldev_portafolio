@@ -1,5 +1,5 @@
-import './Skills.css'
-import SkillCard from '../SkillCard/SkillCard'
+import './Skills.css';
+import SkillCard from '../SkillCard/SkillCard';
 import { 
         faHtml5, 
         faCss3Alt, 
@@ -9,7 +9,7 @@ import {
         faGitAlt 
         } from '@fortawesome/free-brands-svg-icons';
 
-function Skills(){
+const Skills = () => {
     return <section className='skills'>
         <h2 className='skills__title'><span className='quotes'>{'< '}</span>Hábilidades<span className='quotes'>{' >'}</span></h2>
         <div className='skills__container'>
@@ -21,6 +21,6 @@ function Skills(){
             <SkillCard icon={ faGitAlt } nombre='Git'/>
         </div>
     </section>
-}
+};
 
-export default Skills
+export default Skills;
