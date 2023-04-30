@@ -15,12 +15,16 @@
     align-self: flex-start;
 }
 
-.input__input {
+.input__input{
     width: 100%;
     background-color: #fff;
-    border: none;
     padding: 15px 10px;
     outline-color: #6278f7;
     font-size: 16px;
     box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.invalid {
+    border: 3px solid red;
 }
