@@ -1,6 +1,7 @@
 .contact {
-    padding: 0 10%;
-    height: 100vh;
+    padding: 30px 10%;
+    height: auto;
+    background-color: #1A2233;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,11 +10,17 @@
 
 .contact__title {
     font-size: 2rem;
+    color: #fff;
 }
 
 .contact__form {
-    background-color: #1A2233;
-    padding: 25px 50px;
-    width: 50%;
-    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    margin: 19px;
+    padding: 1.5em 2.5em;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
