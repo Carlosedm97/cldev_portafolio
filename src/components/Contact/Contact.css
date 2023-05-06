@@ -24,3 +24,22 @@
     flex-direction: column;
     gap: 20px;
 }
+
+.contact__input{
+    padding: 15px 10px;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    outline-offset: 0.2rem;
+    background-color: #fff;
+    font-size: 1rem;
+    border: 1px solid #b1b1b1;
+}
+
+.contact__input:focus-visible {
+    outline: 2px solid #6278f7;
+}
+
+.contact__form textarea {
+    resize: none;
+    font-family: inherit;
+}

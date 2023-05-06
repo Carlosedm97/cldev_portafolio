@@ -1,64 +1,67 @@
-import { useState, useRef } from 'react';
 import './Contact.css';
-import Input from '../Input/Input';
+import { useForm } from '../../hooks/useForm';
 import SendButton from '../SendButton/SendButton';
+
+const initialForm = {};
+
+const validationsForm = (form) =>{}
 
 const Contact = () => {
 
-    // const input1Ref = useRef(null);
-    // const input2Ref = useRef(null);
-
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [subject, setSubject] = useState('');
-    const [message, setMessage] = useState('');
-
-    const handleFormSubmit = (event) => {
-        event.preventDefault()
-        // console.log(input1Ref.current.checkValidity());
-        // console.log(input2Ref.current.checkValidity());
-        const dataToSend = {
-            name: name,
-            email: email,
-            subject: subject,
-            message: message
-        }
-        console.log('Enviando datos...', dataToSend)
-    }
+    const {form,
+            errors, 
+            loading, 
+            response,
+            HandleInputBlur,
+            HandleInputChange,
+            HandleInputSubmit
+        } = useForm(initialForm, validationsForm);
 
     return <section className='contact'>
         <h2 className='contact__title'><span className='quotes'>{'< '}</span>Contacto<span className='quotes'>{' >'}</span></h2>
-        <form className='contact__form' onSubmit={ handleFormSubmit }>
-            <Input 
-            title='Nombre'
-            placeholder='Ingrese su nombre'
-            required
-            type='text'
-            setValue={ setName }
-            // ref={ input1Ref }
-            />
-            <Input 
-            title='Correo'
-            placeholder='usuario@proveedor.com'
-            required
-            type='email'
-            setValue={ setEmail }
-            // ref={ input2Ref }
-            />
-            <Input 
-            title='Asunto'
-            placeholder='Ingrese el asunto'
-            required
-            type='text'
-            setValue={ setSubject }
-            />
-            <Input 
-            title='Mensaje'
-            placeholder='Ingrese el mensaje'
-            required
-            type='text'
-            setValue={ setMessage }
-            />
+        <form className='contact__form' onSubmit={HandleInputSubmit}>
+            <input
+                className='contact__input'
+                type='text' 
+                name='name' 
+                placeholder='Ingresa tu nombre' 
+                onChange={HandleInputChange}
+                value={form.name}
+                required 
+                onBlur={HandleInputBlur} />
+
+            <input
+                className='contact__input'
+                type='email' 
+                name='email' 
+                placeholder='Ingresa tu email' 
+                onChange={HandleInputChange}
+                value={form.email}
+                required 
+                onBlur={HandleInputBlur} />
+
+            <input
+                className='contact__input'
+                type='text' 
+                name='subject' 
+                placeholder='Ingresa el asunto' 
+                onChange={HandleInputChange}
+                value={form.subject}
+                required 
+                onBlur={HandleInputBlur} />
+
+            <textarea
+                className='contact__input'
+                name='message'
+                cols='50'
+                rows='5'
+                placeholder='Ingrese un mensaje'
+                onChange={HandleInputChange}
+                value={form.message}
+                required 
+                onBlur={HandleInputBlur}
+            ></textarea>
+
             <SendButton texto='Enviar'/>
         </form>
     </section>
