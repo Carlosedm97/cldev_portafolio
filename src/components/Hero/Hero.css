@@ -45,9 +45,9 @@
 }
 
 .hero__buttons {
-    width: 100%;
+    width: 50%;
     display: flex;
-    gap: 100px;
+    justify-content: space-between;
 }
 
 .button__link {
@@ -66,4 +66,32 @@
 .hero__image img {
     width: 300px;
     border-radius: 50%;
+}
+
+@media screen and (max-width: 800px) {
+    .hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 50px;
+        padding: 0 5%;
+    }
+
+    .texts__title, .texts__paragraph {
+        font-size: 2rem;
+    }
+
+    .hero__info {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero__buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .button__link {
+        font-size: 18px;
+    }
 }

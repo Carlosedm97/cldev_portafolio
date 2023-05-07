@@ -4,8 +4,7 @@ import {
         faHtml5, 
         faCss3Alt, 
         faJs, 
-        faReact, 
-        faNodeJs, 
+        faReact,
         faGitAlt 
         } from '@fortawesome/free-brands-svg-icons';
 
@@ -17,7 +16,6 @@ const Skills = () => {
             <SkillCard icon={ faCss3Alt } nombre='CSS3'/>
             <SkillCard icon={ faJs } nombre='JavasCript'/>
             <SkillCard icon={ faReact } nombre='React'/>
-            <SkillCard icon={ faNodeJs } nombre='Node JS'/>
             <SkillCard icon={ faGitAlt } nombre='Git'/>
         </div>
     </section>
