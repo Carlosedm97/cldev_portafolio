@@ -23,7 +23,7 @@ const Header = () => {
 
     return <header className='header'>
         <h1 className='header__logo'><a className='logo__enlace' href='https://github.com/Carlosedm97' rel='noopener noreferrer'>CLDev<span className='logo__dot'>.</span></a></h1>
-        {window.innerWidth < 892 ? (
+        {window.innerWidth < 1024 ? (
             <FontAwesomeIcon icon={faBars}/>
         ) : (
             <nav className='header__nav'>

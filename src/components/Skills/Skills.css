@@ -12,8 +12,23 @@
 }
 
 .skills__container {
-    margin: 19px 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    margin: 20px 0;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 140px);
+    justify-content: center;
+    grid-gap: 10px;
+    max-width: 1000px;
+    height: auto;
+}
+
+@media screen and (max-width: 425px) {
+    .skills {
+        height: auto;
+    }
+
+    .skills__container {
+        justify-content: center;
+        grid-gap: 10px;
+    }
 }

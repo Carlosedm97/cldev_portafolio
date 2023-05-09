@@ -28,9 +28,7 @@ const Hero = () => {
                     rel='noopener noreferrer'>Curriculum<FontAwesomeIcon icon={faFile} /></a>
             </div>
         </div>
-        <div className='hero__image'>
-            <img src='https://github.com/Carlosedm97.png' alt='Foto de Carlos'/>
-        </div>
+        <img className='hero__image' src='https://github.com/Carlosedm97.png' alt='Foto de Carlos'/>
     </section>
 };
 
