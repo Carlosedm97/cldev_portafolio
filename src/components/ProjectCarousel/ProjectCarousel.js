@@ -1,42 +1,79 @@
-import './ProjectCarousel.css';
-import React from 'react';
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import "./ProjectCarousel.css";
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const options = {
-    type: 'loop',
-    perPage: 1,
-    rewind: true,
-    arrows: true,
-    gap: '1rem',
-    pagination: true,
-    autoplay: true,
-    interval: 3000,
-    pauseOnHover: true,
-};
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 const ProjectCarousel = ({ projects }) => {
-  return (
-    <Splide options={options}>
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
       {
-        projects.map((project) => (
-          <SplideSlide>
-            <div>
-              <img className='project__image' src={project.image} alt={project.name} />
-              <div className='project__gradient'></div>
-              <div className='project__content'>
-                <h3 className='project__title'>{project.name}</h3>
-                <p className='project__description'>{project.description}</p>
-                <div className='project__buttons'>
-                  <a className='project__link' href={project.demo} target='_blank' rel='noopener noreferrer'>Ver demo</a>
-                  <a className='project__link' href={project.code} target='_blank' rel='noopener noreferrer'>Ver código</a>
-                </div>
-              </div>
-            </div>
-          </SplideSlide>
-        ))
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          initialSlide: 0
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
       }
-    </Splide>
+    ]
+  };
+
+  return (
+    <div className="slider__container">
+      <Slider {...settings} className="slider">
+        {projects.map((project) => {
+          const { image, name, description, demo, code } = project;
+          return <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+              sx={{ height: 160 }}
+              image={ image }
+              title={ name }
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h6" component="div">
+                { name }
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                { description }
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button href={ demo } target='_blank' rel='noopener noreferrer' size="small">Demo</Button>
+              <Button href={ code } target='_blank' rel='noopener noreferrer' size="small">Código</Button>
+            </CardActions>
+          </Card>
+        })}
+      </Slider>
+    </div>
   )
 };
 

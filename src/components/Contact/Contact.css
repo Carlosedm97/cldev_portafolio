@@ -50,3 +50,9 @@
     color: red;
     font-size: 13px;
 }
+
+@media screen and (max-width: 425px) {
+    .contact__title {
+        font-size: 1.4rem;
+    }
+}

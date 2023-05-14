@@ -18,3 +18,14 @@
     font-size: 1.2rem;
     text-align: justify;
 }
+
+@media screen and (max-width: 425px) {
+    .AboutMe__title {
+        font-size: 1.4rem;
+    }
+
+    .AboutMe__paragraph {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
