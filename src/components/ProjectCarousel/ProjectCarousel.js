@@ -1,5 +1,5 @@
 import "./ProjectCarousel.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,7 +11,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-const ProjectCarousel = ({ projects }) => {
+const ProjectCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -47,18 +47,37 @@ const ProjectCarousel = ({ projects }) => {
     ]
   };
 
+  const [projects, setProjects] = useState([])
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await fetch ('https://portafolio-api.onrender.com/projects');
+        const projects = await data.json();
+        setProjects(projects);
+      } catch (event) {
+        console.log(event);
+      }
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <div className="slider__container">
       <Slider {...settings} className="slider">
         {projects.map((project) => {
           const { image, name, description, demo, code } = project;
-          return <Card sx={{ maxWidth: 345 }}>
+          return <Card sx={{ 
+              width: 345,
+              height: 350
+            }}>
             <CardMedia
               sx={{ height: 160 }}
               image={ image }
               title={ name }
             />
-            <CardContent>
+            <CardContent sx={{ display: "flex", flexDirection: "column", flexGrow: 1}}>
               <Typography gutterBottom variant="h6" component="div">
                 { name }
               </Typography>
