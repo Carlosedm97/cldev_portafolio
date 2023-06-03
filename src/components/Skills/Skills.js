@@ -9,7 +9,7 @@ import {
         } from '@fortawesome/free-brands-svg-icons';
 
 const Skills = () => {
-    return <section className='skills'>
+    return <section className='skills' id='habilidades'>
         <h2 className='skills__title'><span className='quotes'>{'< '}</span>Hábilidades<span className='quotes'>{' >'}</span></h2>
         <div className='skills__container'>
             <SkillCard icon={ faHtml5 } nombre='HTML5'/>

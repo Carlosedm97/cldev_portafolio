@@ -55,7 +55,7 @@ const Contact = () => {
             HandleInputSubmit
         } = useForm(initialForm, validationsForm);
 
-    return <section className='contact'>
+    return <section className='contact' id='contacto'>
         <h2 className='contact__title'><span className='quotes'>{'< '}</span>Contacto<span className='quotes'>{' >'}</span></h2>
         <form className='contact__form' onSubmit={HandleInputSubmit}>
             <div className='input__container'>

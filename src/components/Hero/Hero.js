@@ -23,9 +23,10 @@ const Hero = () => {
                     rel='noopener noreferrer'>LinkedIn<FontAwesomeIcon icon={faLinkedin} /></a>
                 <a 
                     className='button__link' 
-                    href='https://github.com/Carlosedm97' 
-                    target='_blank' 
-                    rel='noopener noreferrer'>Curriculum<FontAwesomeIcon icon={faFile} /></a>
+                    href='/assets/CV Carlos López.pdf'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >Curriculum<FontAwesomeIcon icon={faFile} /></a>
             </div>
         </div>
         <img className='hero__image' src='https://github.com/Carlosedm97.png' alt='Foto de Carlos'/>

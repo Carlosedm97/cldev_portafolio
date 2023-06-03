@@ -46,7 +46,7 @@ import ProjectCarousel from '../ProjectCarousel/ProjectCarousel';
 
 const Projects = () => {
     return (
-        <section className='projects'>
+        <section className='projects' id='proyectos'>
             <h2 className='projects__title'><span className='quotes'>{'< '}</span>Proyectos<span className='quotes'>{' >'}</span></h2>
             <ProjectCarousel />
         </section>

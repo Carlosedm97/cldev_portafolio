@@ -15,11 +15,10 @@ const Header = () => {
                     { clicked ? <FontAwesomeIcon icon={faXmark} onClick={(event) => {
                         setClicked(!clicked);
                     }}/> : <></>}
-                    <li className='list__item'><a className='item__link' href='#' rel='noopener noreferrer'>Sobre mi</a></li>
-                    <li className='list__item'><a className='item__link' href='#' rel='noopener noreferrer'>Hábilidades</a></li>
-                    <li className='list__item'><a className='item__link' href='#' rel='noopener noreferrer'>Formación</a></li>
-                    <li className='list__item'><a className='item__link' href='#' rel='noopener noreferrer'>Proyectos</a></li>
-                    <li className='list__item'><a className='item__link' href='#' rel='noopener noreferrer'>Contacto</a></li>
+                    <li className='list__item'><a className='item__link' href='#sobre-mi' rel='noopener noreferrer' onClick={() => setClicked(!clicked)}>Sobre mi</a></li>
+                    <li className='list__item'><a className='item__link' href='#habilidades' rel='noopener noreferrer' onClick={() => setClicked(!clicked)}>Hábilidades</a></li>
+                    <li className='list__item'><a className='item__link' href='#proyectos' rel='noopener noreferrer' onClick={() => setClicked(!clicked)}>Proyectos</a></li>
+                    <li className='list__item'><a className='item__link' href='#contacto' rel='noopener noreferrer' onClick={() => setClicked(!clicked)}>Contacto</a></li>
                 </ul>
             </nav>
             <div className='header__button'>
