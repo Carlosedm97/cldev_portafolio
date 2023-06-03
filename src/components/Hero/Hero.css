@@ -28,6 +28,8 @@
     display: inline-block;
     color: #2490CE;
     animation: blink 1s infinite; /* animación para hacer parpadear el guion */
+    position: relative;
+    z-index: -1;
 }
 
 @keyframes blink {
