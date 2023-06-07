@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark, faUser, faBrain, faCode, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faXmark, faHouse, faUser, faBrain, faCode, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { BsFillGridFill } from "react-icons/bs";
 import "./Header.css";
 
 const Header = () => {
@@ -22,8 +23,22 @@ const Header = () => {
           <li className="list__item">
             <a
               className="item__link"
+              href="#"
+              onClick={() => setClicked(!clicked)}
+            >
+              {clicked && (
+                <div>
+                  <FontAwesomeIcon icon={faHouse} />
+                  <br />
+                </div>
+              )}
+              Inicio
+            </a>
+          </li>
+          <li className="list__item">
+            <a
+              className="item__link"
               href="#sobre-mi"
-              rel="noopener noreferrer"
               onClick={() => setClicked(!clicked)}
             >
               {clicked && (
@@ -39,7 +54,6 @@ const Header = () => {
             <a
               className="item__link"
               href="#habilidades"
-              rel="noopener noreferrer"
               onClick={() => setClicked(!clicked)}
             >
               {clicked && (
@@ -54,8 +68,6 @@ const Header = () => {
           <li className="list__item">
             <a
               className="item__link"
-              href="#proyectos"
-              rel="noopener noreferrer"
               onClick={() => setClicked(!clicked)}
             >
               {clicked && (
@@ -71,7 +83,6 @@ const Header = () => {
             <a
               className="item__link"
               href="#contacto"
-              rel="noopener noreferrer"
               onClick={() => setClicked(!clicked)}
             >
               {clicked && (
@@ -98,9 +109,8 @@ const Header = () => {
         </div>
       </nav>
       <div className="header__button">
-        <FontAwesomeIcon icon={faBars} onClick={() => setClicked(!clicked)} />
+        <BsFillGridFill onClick={() => setClicked(!clicked)}/>
       </div>
-      <div className={`header__bg ${clicked ? "active" : ""}`}></div>
     </header>
   );
 };
