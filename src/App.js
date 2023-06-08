@@ -11,9 +11,9 @@ function App() {
     return <div>
         <Header />
         <Hero />
+        <Projects />
         <AboutMe />
         <Skills />
-        <Projects />
         <Contact />
     </div>
 }

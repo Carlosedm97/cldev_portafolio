@@ -85,7 +85,7 @@
     .hero {
         flex-direction: column-reverse;
         justify-content: center;
-        gap: 50px;
+        gap: 100px;
     }
 
     .hero__texts {

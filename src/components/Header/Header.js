@@ -24,11 +24,10 @@ const Header = () => {
             <a
               className="item__link"
               href="#"
-              onClick={() => setClicked(!clicked)}
             >
               {clicked && (
                 <div>
-                  <FontAwesomeIcon icon={faHouse} />
+                  <FontAwesomeIcon icon={faHouse} onClick={() => setClicked(!clicked)}/>
                   <br />
                 </div>
               )}
@@ -39,11 +38,10 @@ const Header = () => {
             <a
               className="item__link"
               href="#sobre-mi"
-              onClick={() => setClicked(!clicked)}
             >
               {clicked && (
                 <div>
-                  <FontAwesomeIcon icon={faUser} />
+                  <FontAwesomeIcon icon={faUser} onClick={() => setClicked(!clicked)} />
                   <br />
                 </div>
               )}
@@ -54,11 +52,10 @@ const Header = () => {
             <a
               className="item__link"
               href="#habilidades"
-              onClick={() => setClicked(!clicked)}
             >
               {clicked && (
                 <div>
-                  <FontAwesomeIcon icon={faBrain} />
+                  <FontAwesomeIcon icon={faBrain} onClick={() => setClicked(!clicked)} />
                   <br />
                 </div>
               )}
@@ -68,11 +65,11 @@ const Header = () => {
           <li className="list__item">
             <a
               className="item__link"
-              onClick={() => setClicked(!clicked)}
+              href="#proyectos"
             >
               {clicked && (
                 <div>
-                  <FontAwesomeIcon icon={faCode} />
+                  <FontAwesomeIcon icon={faCode} onClick={() => setClicked(!clicked)} />
                   <br />
                 </div>
               )}
@@ -83,11 +80,10 @@ const Header = () => {
             <a
               className="item__link"
               href="#contacto"
-              onClick={() => setClicked(!clicked)}
             >
               {clicked && (
                 <div>
-                  <FontAwesomeIcon icon={faEnvelope} />
+                  <FontAwesomeIcon icon={faEnvelope} onClick={() => setClicked(!clicked)} />
                   <br />
                 </div>
               )}
