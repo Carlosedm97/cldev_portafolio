@@ -1,22 +1,19 @@
 import "./Projects.css";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        autoplay: true,
+        speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplaySpeed: 6000
     };
 
     return (
@@ -25,108 +22,70 @@ const Projects = () => {
                 <span className="quotes">{"< "}</span>Proyectos
                 <span className="quotes">{" >"}</span>
             </h2>
-            <Slider {...settings}>
+            <Slider {...settings} className="projects__carousel">
                 <div>
-                    <Card
-                        sx={{
-                            width: "100%",
-                            height: "70%",
-                            display: "flex",
-                            borderRadius: "1rem",
-                            "@media (max-width: 768px)": {
-                                flexDirection: "column",
-                                height: "auto",
-                            },
-                        }}
-                    >
-                        <CardMedia
-                            component="img"
-                            alt="green iguana"
-                            height="100%"
-                            image="https://i.ibb.co/3BfQBcc/encriptador.jpg"
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                Lizard
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over
-                                6,000 species, ranging across all continents except Antarctica
-                            </Typography>
-                            <CardActions>
-                                <Button size="small">Share</Button>
-                                <Button size="small">Learn More</Button>
-                            </CardActions>
-                        </CardContent>
-                    </Card>
+                    <div className="card">
+                        <div className="image__container">
+                            <img
+                                src="https://i.ibb.co/3BfQBcc/encriptador.jpg"
+                                className="card__image"
+                            />
+                        </div>
+                        <div className="data__container">
+                            <h2 className="card__title">Encriptador de Texto</h2>
+                            <div className="card__description">
+                                Desarrollo de un encriptador de texto como desafío de la ruta
+                                "Lógica de Programación" de la formación Oracle Next Education.
+                            </div>
+                            <div className="card__buttons">
+                                    <a className="card__button" href="https://carlosedm97.github.io/encriptador_de_texto_ONE/" target="_blank" rel="noopener noreferrer" >
+                                        Ver más <FontAwesomeIcon icon={faArrowRight} fade />
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div>
-                    <Card
-                        sx={{
-                            width: "100%",
-                            height: "70%",
-                            display: "flex",
-                            borderRadius: "1rem",
-                            "@media (max-width: 768px)": {
-                                flexDirection: "column",
-                                height: "auto",
-                            },
-                        }}
-                    >
-                        <CardMedia
-                            component="img"
-                            alt="green iguana"
-                            height="100%"
-                            image="https://i.ibb.co/jR7QqcK/alurageek.jpg"
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                Lizard
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over
-                                6,000 species, ranging across all continents except Antarctica
-                            </Typography>
-                            <CardActions>
-                                <Button size="small">Share</Button>
-                                <Button size="small">Learn More</Button>
-                            </CardActions>
-                        </CardContent>
-                    </Card>
+                    <div className="card">
+                        <div className="image__container">
+                            <img
+                                src="https://i.ibb.co/jR7QqcK/alurageek.jpg"
+                                className="card__image"
+                            />
+                        </div>
+                        <div className="data__container">
+                            <h2 className="card__title">AluraGeek</h2>
+                            <div className="card__description">
+                                Desarrollo de un Ecommerce como desafío de la ruta 'Front End' de la formación Oracle Next Education.
+                            </div>
+                            <div className="card__buttons">
+                                    <a className="card__button" href="https://alurageek-one-carlosedm97.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                        Ver más <FontAwesomeIcon icon={faArrowRight} fade />
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div>
-                    <Card
-                        sx={{
-                            width: "100%",
-                            height: "70%",
-                            display: "flex",
-                            borderRadius: "1rem",
-                            "@media (max-width: 768px)": {
-                                flexDirection: "column",
-                                height: "auto",
-                            },
-                        }}
-                    >
-                        <CardMedia
-                            component="img"
-                            alt="green iguana"
-                            height="100%"
-                            image="https://i.ibb.co/fH6Dd2w/image1.jpg"
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                Lizard
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over
-                                6,000 species, ranging across all continents except Antarctica
-                            </Typography>
-                            <CardActions>
-                                <Button size="small">Share</Button>
-                                <Button size="small">Learn More</Button>
-                            </CardActions>
-                        </CardContent>
-                    </Card>
+                    <div className="card">
+                        <div className="image__container">
+                            <img
+                                src="https://i.ibb.co/fH6Dd2w/image1.jpg"
+                                className="card__image"
+                            />
+                        </div>
+                        <div className="data__container">
+                            <h2 className="card__title">AluraFlix</h2>
+                            <div className="card__description">
+                                Desarrollo de una página web de videos como desafío de la ruta "React JS" de la formación Oracle Next Education.
+                            </div>
+                            <div className="card__buttons">
+                                    <a className="card__button" href="https://aluraflix-one-alpha.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                        Ver más <FontAwesomeIcon icon={faArrowRight} fade />
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </Slider>
         </section>
